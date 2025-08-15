@@ -1,0 +1,103 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+header {
+  margin: 20px 8px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button,
+select {
+  border-radius: 6px;
+  padding: 3px 7px;
+  border: 1px solid #d1d5db;
+  color: #111827;
+  font-size: 0.9rem;
+}
+button {
+  color: #374151;
+}
+
+button:hover,
+button:focus,
+select:focus,
+select:hover {
+  border: 1px solid #d1d5db;
+}
+
+option {
+  border-color: red;
+}
+
+input[type="color"] {
+  min-width: 51px;
+  min-height: 41px;
+  border: none;
+}
+
+#colors {
+  display: flex;
+  flex-direction: column;
+}
+
+.color {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3.2em;
+}
+
+.color span {
+  color: #fff;
+}
+
+@media (min-width: 40em) {
+  header {
+    justify-content: space-around;
+    margin: 2em;
+  }
+
+  select {
+    width: 100%;
+    margin: 0 1em;
+    font-size: 1.1rem;
+  }
+  button {
+    min-width: fit-content;
+    font-size: 1.1rem;
+  }
+
+  #colors {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.8em;
+    height: 100vh;
+  }
+
+  .color span {
+    font-size: 1.5rem;
+  }
+}
